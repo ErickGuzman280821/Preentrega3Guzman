@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    display: flex;
+    min-height: 80px;
+    background-color: #333;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 30px;
+    border-radius: 50px;
+}
+
+nav a{
+    font-weight: 600;
+    margin-right: 30px;
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: black;
+}
+
+.h1index{
+    padding: 10px;
+    color: black;
+    font-size: 40px;
+}
+
+.p{
+    min-height: 170px;
+    margin: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 40px;
+    color: white;
+    font-size: 20px;
+    border: 7px solid black;
+    border-radius: 15px;
+    background-image: url(img/imgdeinicio.jpg);
+    background-size: cover;
+}
+
+footer{
+    background-color: #333;
+    text-align: center;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    letter-spacing: 20px;
+    margin-top: auto;
+    padding: 10px;
+}
+
+.redes{
+    font-size: 50px;
+}
+.redes i{
+    color: white;
+}
+.redes i:hover{
+    color: black;
+}
+
+.galeria{
+    height: 100%;
+    width: 75%;
+    margin: 10%;
+    margin-top: 0;
+    background-color: rgb(158, 158, 158);
+    border: 5px solid black;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 200px;
+    grid-template-areas: 
+    "img1 img2"
+    "img3 img4";
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.img{
+    background-size: cover;
+    background-position: center;
+    border: 3px solid black;
+    border-radius: 7px;
+    padding: 20px;
+}
+
+.img1{
+    grid-area: img1;
+    background-image: url(img/img1.jpg);
+}
+
+.img2{
+    grid-area: img2;
+    background-image: url(img/img2.jpg);
+}
+
+.img3{
+    grid-area: img3;
+    background-image: url(img/img3.jpg);
+}
+
+.img4{
+    grid-area: img4;
+    background-image: url(img/img4.jpg);
+}
+
+
+@media screen and (max-width: 720px) {
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav{
+        padding: 10px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .p{
+        min-height: 500px;
+    }
+
+}
+
+@media screen and (min-width: 700px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 20px;
+    }
+
+    .p{
+        height: 40vh;
+        font-family: sans-serif;
+    }
+
+    .logo img {
+        max-height: 50px;}
+    
+    .menu-btn {
+        font-size: 18px;}
+}
+
+@media screen and (min-width: 1366px) {
+    .p{
+        height: 60vh;
+    }
+}
+
+
+/* Aqui finaliza INICIO y aqui mismo empieza NOSOTROS pero en SASS*/
